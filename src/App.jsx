@@ -14,7 +14,7 @@ function App() {
 
       DarkVeil — fixed behind everything 
       <div style={{ position: 'fixed', inset: 0, zIndex: 0 }}>
-        <DarkVeil hueShift={0} noiseIntensity={0} scanlineIntensity={0} speed={0.5} scanlineFrequency={0} warpAmount={0} />
+        <DarkVeil hueShift={0} noiseIntensity={0} scanlineIntensity={0} speed={1.0} scanlineFrequency={3.2} warpAmount={2.1} />
       </div>
       
 
@@ -146,7 +146,7 @@ function App() {
           exit={{ y: '-120%' }}
           staggerDuration={0.03}
           transition={{ type: 'spring', damping: 28, stiffness: 380 }}
-          rotationInterval={2200}
+          rotationInterval={2000}
           style={{
             color: 'white',
             fontWeight: 700,
