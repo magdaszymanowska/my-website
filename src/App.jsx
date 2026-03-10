@@ -146,7 +146,7 @@ function App() {
           exit={{ y: '-120%' }}
           staggerDuration={0.03}
           transition={{ type: 'spring', damping: 28, stiffness: 380 }}
-          rotationInterval={3600}
+          rotationInterval={2200}
           style={{
             color: 'white',
             fontWeight: 700,
