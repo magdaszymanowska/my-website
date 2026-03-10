@@ -6,6 +6,7 @@ import MatrixVeil from './components/MatrixVeil';
 import ConstellationBackground from './components/ConstellationBackground';
 
 function App() {
+  const isMobile = window.innerWidth < 768
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
@@ -105,8 +106,7 @@ function App() {
   }} />
 
   {/* Main content */}
-  <div style={{ position: 'relative', zIndex: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', maxWidth: '52rem', margin: '0 auto' }}>
-
+    <div style={{ position: 'relative', zIndex: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', maxWidth: '52rem', margin: '0 auto', marginTop: isMobile ? '-9rem' : '0' }}>
     {/* Name */}
     <h1 style={{ margin: '0 0 1.5rem', fontSize: 'clamp(3.5rem, 10vw, 7rem)', fontWeight: 600, lineHeight: 1, letterSpacing: '-0.04em', color: 'white' }}>
       Hi, I'm Magda.

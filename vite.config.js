@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 import path from 'path'
 
 export default defineConfig({
+  base: '/my-website/',
   plugins: [
     react(),
     tailwindcss(),
@@ -14,3 +15,4 @@ export default defineConfig({
     },
   },
 })
+
