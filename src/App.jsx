@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import DarkVeil from './components/DarkVeil'
 import RotatingText from './components/RotatingText'
+import Plasma from './components/Plasma'
 import MatrixRain from './components/MatrixRain'
 import MatrixVeil from './components/MatrixVeil';
 import ConstellationBackground from './components/ConstellationBackground';
@@ -12,20 +13,31 @@ function App() {
   return (
     <div className="antialiased" style={{ backgroundColor: '#0a0a0a', color: '#e5e5e5' }}>
 
-      DarkVeil — fixed behind everything 
-      <div style={{ position: 'fixed', inset: 0, zIndex: 0 }}>
-        <DarkVeil hueShift={0} noiseIntensity={0} scanlineIntensity={0} speed={1.0} scanlineFrequency={3.2} warpAmount={2.1} />
-      </div>
       
+      {/*<div style={{ position: 'fixed', inset: 0, zIndex: 0 }}>
+        <DarkVeil hueShift={0} noiseIntensity={0} scanlineIntensity={0} speed={1.0} scanlineFrequency={3.2} warpAmount={2.1} />
+      </div>*/}
 
-      {/*<ConstellationBackground
-  count={80}
-  connectionDistance={150}
-  nodeColor="rgba(136, 196, 255, 1)"
-  lineColor="rgba(136, 196, 255, 0.15)"
-  mouseRadius={100}
-  glow={true}
-/>*/}
+      {/*<div style={{ position: 'fixed', inset: 0, zIndex: 0, width: '100%', height: '100%' }}>
+          <Plasma
+            color="#321593"
+            speed={1}
+            direction="forward"
+            scale={1}
+            opacity={1}
+            mouseInteractive={false}
+          />
+      </div>*/}
+
+      
+            <ConstellationBackground
+            count={80}
+            connectionDistance={150}
+            nodeColor="rgba(136, 196, 255, 1)"
+            lineColor="rgba(136, 196, 255, 0.15)"
+            mouseRadius={100}
+            glow={true}
+          />
 
       <div style={{ position: 'relative', zIndex: 1 }}>
 
@@ -96,7 +108,7 @@ function App() {
   {/* Dark radial overlay */}
   <div aria-hidden style={{
     position: 'absolute', inset: 0, pointerEvents: 'none',
-    background: 'radial-gradient(ellipse 90% 80% at 50% 50%, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.25) 100%)',
+    background: 'radial-gradient(ellipse 90% 80% at 50% 50%, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.25) 100%)',
   }} />
 
   {/* Bottom fade */}
