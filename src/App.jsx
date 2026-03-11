@@ -31,7 +31,7 @@ function App() {
 
       
             <ConstellationBackground
-            count={80}
+            count={window.innerWidth < 768 ? 40 : 80}
             connectionDistance={150}
             nodeColor="rgba(136, 196, 255, 1)"
             lineColor="rgba(136, 196, 255, 0.15)"
