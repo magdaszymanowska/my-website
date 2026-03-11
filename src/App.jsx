@@ -5,6 +5,7 @@ import Plasma from './components/Plasma'
 import MatrixRain from './components/MatrixRain'
 import MatrixVeil from './components/MatrixVeil';
 import ConstellationBackground from './components/ConstellationBackground';
+import Silk from './components/Silk';
 
 function App() {
   const isMobile = window.innerWidth < 768
@@ -13,12 +14,22 @@ function App() {
   return (
     <div className="antialiased" style={{ backgroundColor: '#0a0a0a', color: '#e5e5e5' }}>
 
-      
-      <div style={{ position: 'fixed', inset: 0, zIndex: 0 }}>
+  
+        <div style={{ position: 'fixed', inset: 0, zIndex: 0, width: '100%', height: '100%' }}>
+          <Silk
+            speed={5}
+            scale={1}
+            color="#1b0e4e"
+            noiseIntensity={0}
+            rotation={0}
+          />
+        </div>
+
+      {/*<div style={{ position: 'fixed', inset: 0, zIndex: 0 }}>
         <DarkVeil hueShift={0} noiseIntensity={0} scanlineIntensity={0} speed={1.0} scanlineFrequency={0} warpAmount={0} />
       </div>
-
-      {/*<div style={{ position: 'fixed', inset: 0, zIndex: 0, width: '100%', height: '100%' }}>
+      
+      <div style={{ position: 'fixed', inset: 0, zIndex: 0, width: '100%', height: '100%' }}>
           <Plasma
             color="#321593"
             speed={1}
@@ -108,7 +119,7 @@ function App() {
   {/* Dark radial overlay */}
   <div aria-hidden style={{
     position: 'absolute', inset: 0, pointerEvents: 'none',
-    background: 'radial-gradient(ellipse 90% 80% at 50% 50%, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.25) 100%)',
+    background: 'radial-gradient(ellipse 90% 80% at 50% 50%, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.25) 100%)',
   }} />
 
   {/* Bottom fade */}
