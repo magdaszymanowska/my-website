@@ -14,9 +14,9 @@ function App() {
     <div className="antialiased" style={{ backgroundColor: '#0a0a0a', color: '#e5e5e5' }}>
 
       
-      {/*<div style={{ position: 'fixed', inset: 0, zIndex: 0 }}>
-        <DarkVeil hueShift={0} noiseIntensity={0} scanlineIntensity={0} speed={1.0} scanlineFrequency={3.2} warpAmount={2.1} />
-      </div>*/}
+      <div style={{ position: 'fixed', inset: 0, zIndex: 0 }}>
+        <DarkVeil hueShift={0} noiseIntensity={0} scanlineIntensity={0} speed={1.0} scanlineFrequency={0} warpAmount={0} />
+      </div>
 
       {/*<div style={{ position: 'fixed', inset: 0, zIndex: 0, width: '100%', height: '100%' }}>
           <Plasma
@@ -30,14 +30,14 @@ function App() {
       </div>*/}
 
       
-            <ConstellationBackground
+            {/*<ConstellationBackground
             count={window.innerWidth < 768 ? 40 : 80}
             connectionDistance={150}
             nodeColor="rgba(136, 196, 255, 1)"
             lineColor="rgba(136, 196, 255, 0.15)"
             mouseRadius={100}
             glow={true}
-          />
+          />*/}
 
       <div style={{ position: 'relative', zIndex: 1 }}>
 
@@ -108,7 +108,7 @@ function App() {
   {/* Dark radial overlay */}
   <div aria-hidden style={{
     position: 'absolute', inset: 0, pointerEvents: 'none',
-    background: 'radial-gradient(ellipse 90% 80% at 50% 50%, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.25) 100%)',
+    background: 'radial-gradient(ellipse 90% 80% at 50% 50%, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.25) 100%)',
   }} />
 
   {/* Bottom fade */}
